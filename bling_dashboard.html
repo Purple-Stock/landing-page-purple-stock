@@ -7,146 +7,187 @@
     <meta name="description" content="Dashboards integrados à API V3 do Bling ERP. Visualize seus dados de forma clara e intuitiva, sem necessidade de Power BI.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body class="font-sans text-gray-800 bg-gray-100">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+<body class="font-sans text-gray-800 bg-gray-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-purple-600">Purple Stock</a>
-            <div class="hidden md:flex space-x-4">
-                <a href="#planos" class="font-medium hover:text-purple-600">Planos</a>
-                <a href="#beneficios" class="font-medium hover:text-purple-600">Benefícios</a>
-                <a href="#contato" class="font-medium hover:text-purple-600">Contato</a>
+            <a href="#" class="text-2xl font-bold text-purple-600 flex items-center">
+                <svg class="w-8 h-8 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                </svg>
+                Purple Stock
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#planos" class="font-medium hover:text-purple-600 transition duration-300">Planos</a>
+                <a href="#beneficios" class="font-medium hover:text-purple-600 transition duration-300">Benefícios</a>
+                <a href="#contato" class="font-medium hover:text-purple-600 transition duration-300">Contato</a>
             </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section class="bg-purple-700 text-white py-20">
+        <section class="gradient-bg text-white py-24">
             <div class="container mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Dashboards para Bling ERP</h1>
-                <p class="text-xl mb-8 text-center">Integrados na API V3 - Sem necessidade de Power BI</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center leading-tight">Dashboards para Bling ERP</h1>
+                <p class="text-xl mb-10 text-center max-w-2xl mx-auto">Integrados na API V3 - Visualize seus dados de forma clara e intuitiva, sem necessidade de Power BI</p>
                 <div class="text-center">
-                    <a href="#planos" class="bg-white text-purple-700 font-bold py-2 px-6 rounded-full hover:bg-purple-100 transition duration-300">Ver Planos</a>
+                    <a href="#planos" class="bg-white text-purple-700 font-bold py-3 px-8 rounded-full hover:bg-purple-100 transition duration-300 inline-block">Ver Planos</a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16">
+        <section class="py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Veja o Dashboard do Bling em Ação</h2>
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full h-64 md:h-96 rounded-lg shadow-lg" src="https://www.youtube.com/watch?v=REugPD6GLDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h2 class="text-3xl font-bold mb-12 text-center">Veja o Dashboard do Bling em Ação</h2>
+                <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
+                    <iframe class="w-full h-64 md:h-[480px] rounded-lg shadow-2xl" src="https://www.youtube.com/embed/REugPD6GLDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-gray-50">
+        <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Galeria do Sistema</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold mb-12 text-center">Galeria do Sistema</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
                         <a href="img/bling/dash_vendas.png" target="_blank" class="block">
                             <img src="img/bling/dash_vendas.png" alt="Dashboard de Vendas" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-75 transition duration-300">
                         </a>
-                        <p class="text-center font-medium">Dashboard de Vendas</p>
+                        <p class="text-center font-medium text-lg">Dashboard de Vendas</p>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
                         <a href="img/bling/dash_status.png" target="_blank" class="block">
                             <img src="img/bling/dash_status.png" alt="Dashboard de Status" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-75 transition duration-300">
                         </a>
-                        <p class="text-center font-medium">Dashboard de Status</p>
+                        <p class="text-center font-medium text-lg">Dashboard de Status</p>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
                         <a href="img/bling/relatorio_compras.png" target="_blank" class="block">
                             <img src="img/bling/relatorio_compras.png" alt="Relatório de Sugestão de compras" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-75 transition duration-300">
                         </a>
-                        <p class="text-center font-medium">Relatório de Sugestão de compras</p>
+                        <p class="text-center font-medium text-lg">Relatório de Sugestão de compras</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="beneficios" class="bg-white py-16">
+        <section id="beneficios" class="py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Benefícios do Dashboard Bling</h2>
+                <h2 class="text-3xl font-bold mb-12 text-center">Benefícios do Dashboard Bling</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                        <div class="text-purple-600 text-4xl mb-4">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
                         <h3 class="text-xl font-semibold mb-4">Atualização Automática</h3>
-                        <p>Dashboards atualizados várias vezes ao dia, mantendo seus dados sempre em dia.</p>
+                        <p class="text-gray-600">Dashboards atualizados várias vezes ao dia, mantendo seus dados sempre em dia.</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                        <div class="text-purple-600 text-4xl mb-4">
+                            <i class="fas fa-headset"></i>
+                        </div>
                         <h3 class="text-xl font-semibold mb-4">Acompanhamento Técnico</h3>
-                        <p>Nossa equipe monitora o processo de atualização, garantindo a precisão dos dados.</p>
+                        <p class="text-gray-600">Nossa equipe monitora o processo de atualização, garantindo a precisão dos dados.</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                        <div class="text-purple-600 text-4xl mb-4">
+                            <i class="fas fa-database"></i>
+                        </div>
                         <h3 class="text-xl font-semibold mb-4">Acesso Total aos Dados</h3>
-                        <p>Utilize todos os dados da API V3 do Bling para criar suas próprias análises.</p>
+                        <p class="text-gray-600">Utilize todos os dados da API V3 do Bling para criar suas próprias análises.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="planos" class="py-16">
+        <section id="planos" class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Nossos Planos</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">Purple Stock Dashboard BI Enterprise</h3>
-                        <p class="text-3xl font-bold mb-4">R$197,00<span class="text-sm font-normal">/mês</span></p>
-                        <ul class="mb-6">
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Sem fidelidade</li>
-                            <!-- <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Integração Multi Contas Bling</li> -->
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Atualização de alta frequência</li>
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Dashboards de Vendas, Comparativo, Produtos, Metas e Clientes</li>
+                <h2 class="text-3xl font-bold mb-12 text-center">Nossos Planos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-600">Purple Stock Dashboard BI Enterprise</h3>
+                        <p class="text-4xl font-bold mb-6">R$197,00<span class="text-sm font-normal">/mês</span></p>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Sem fidelidade</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Atualização de alta frequência</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Dashboards de Vendas, Comparativo, Produtos, Metas e Clientes</li>
                         </ul>
-                        <a href="https://wa.me/5511995597242?text=Olá,%20gostaria%20de%20contratar%20o%20plano%20Purple%20Stock%20Dashboard%20BI%20Enterprise" target="_blank" class="block text-center bg-purple-600 text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition duration-300">Contratar</a>
+                        <a href="https://wa.me/5511995597242?text=Olá,%20gostaria%20de%20contratar%20o%20plano%20Purple%20Stock%20Dashboard%20BI%20Enterprise" target="_blank" class="block text-center bg-purple-600 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300">Contratar</a>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">Purple Stock Hub + BI</h3>
-                        <p class="text-3xl font-bold mb-4">Consultar</p>
-                        <ul class="mb-6">
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Todos os recursos do plano Enterprise</li>
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Acesso para edição do Dashboard</li>
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Criação de novos Dashboards</li>
-                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i>Acesso ao Banco de Dados</li>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-600">Purple Stock Hub + BI</h3>
+                        <p class="text-4xl font-bold mb-6">Consultar</p>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Todos os recursos do plano Enterprise</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Acesso para edição do Dashboard</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Criação de novos Dashboards</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Acesso ao Banco de Dados</li>
                         </ul>
-                        <a href="https://wa.me/5511995597242?text=Olá,%20gostaria%20de%20solicitar%20uma%20proposta%20para%20o%20plano%20Purple%20Stock%20Hub%20+%20BI" target="_blank" class="block text-center bg-purple-600 text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition duration-300">Solicitar Proposta</a>
+                        <a href="https://wa.me/5511995597242?text=Olá,%20gostaria%20de%20solicitar%20uma%20proposta%20para%20o%20plano%20Purple%20Stock%20Hub%20+%20BI" target="_blank" class="block text-center bg-purple-600 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300">Solicitar Proposta</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="bg-white py-16">
+        <section id="contato" class="py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-8 text-center">Entre em Contato</h2>
-                <form class="max-w-lg mx-auto">
-                    <div class="mb-4">
-                        <label for="nome" class="block mb-2">Nome</label>
-                        <input type="text" id="nome" name="nome" class="w-full px-3 py-2 border rounded" required>
+                <h2 class="text-3xl font-bold mb-12 text-center">Entre em Contato</h2>
+                <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <div class="mb-6">
+                        <label for="nome" class="block mb-2 font-medium">Nome</label>
+                        <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="whatsapp" class="block mb-2">WhatsApp</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-3 py-2 border rounded" required>
+                    <div class="mb-6">
+                        <label for="whatsapp" class="block mb-2 font-medium">WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="email" class="block mb-2">E-mail</label>
-                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded" required>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 font-medium">E-mail</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="mensagem" class="block mb-2">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" class="w-full px-3 py-2 border rounded" required></textarea>
+                    <div class="mb-6">
+                        <label for="mensagem" class="block mb-2 font-medium">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-purple-600 text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition duration-300">Enviar</button>
+                    <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Purple Stock. Todos os direitos reservados.</p>
+            <p class="mb-4">&copy; 2024 Purple Stock. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-purple-400 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-purple-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#"   class="hover:text-purple-400 transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-purple-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
     </footer>
+
     <div id="whatswidget-pre-wrapper" class="">
 		<div id="whatswidget-widget-wrapper" class="whatswidget-widget-wrapper" style="all:revert;">
 		<div id="whatswidget-conversation" class="whatswidget-conversation" style="color: revert; font: revert; font-feature-settings: revert; font-kerning: revert; font-optical-sizing: revert; font-variation-settings: revert; text-orientation: revert; text-rendering: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; animation: revert; appearance: revert; backdrop-filter: revert; backface-visibility: revert; background: revert; background-blend-mode: revert; baseline-shift: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-inline: revert; inset: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-color: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; color-scheme: revert; columns: revert; column-fill: revert; gap: revert; column-rule: revert; column-span: revert; contain: revert; contain-intrinsic-size: revert; content: revert; content-visibility: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: none; dominant-baseline: revert; empty-cells: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; inline-size: revert; inset-block: revert; inset-inline: revert; isolation: revert; letter-spacing: revert; lighting-color: revert; line-break: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; offset: revert; opacity: 0; order: revert; origin-trial-test-property: revert; orphans: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-wrap: revert; overflow: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position: revert; quotes: revert; r: revert; resize: revert; ruby-position: revert; rx: revert; ry: revert; scroll-behavior: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align: revert; text-align-last: revert; text-anchor: revert; text-combine-upright: revert; text-decoration: revert; text-decoration-skip-ink: revert; text-indent: revert; text-overflow: revert; text-shadow: revert; text-size-adjust: revert; text-transform: revert; text-underline-offset: revert; text-underline-position: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; user-select: revert; vector-effect: revert; vertical-align: revert; visibility: revert; -webkit-app-region: revert; border-spacing: revert; -webkit-border-image: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-highlight: revert; -webkit-hyphenate-character: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-mask: revert; -webkit-mask-composite: revert; -webkit-perspective-origin-x: revert; -webkit-perspective-origin-y: revert; -webkit-print-color-adjust: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-emphasis: revert; -webkit-text-emphasis-position: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke: revert; -webkit-transform-origin-x: revert; -webkit-transform-origin-y: revert; -webkit-transform-origin-z: revert; -webkit-user-drag: revert; -webkit-user-modify: revert; white-space: revert; widows: revert; width: revert; will-change: revert; word-break: revert; word-spacing: revert; x: revert; y: revert; z-index: revert;"><div class="whatswidget-conversation-header" style="all:revert;">
@@ -155,5 +196,14 @@
 		<style id="whatswidget-style">.whatswidget-widget-wrapper{font-family:"Helvetica Neue","Apple Color Emoji",Helvetica,Arial,sans-serif !important;font-size:16px !important;position:fixed !important;bottom:20px !important;right:30px !important;z-index:1001 !important}.whatswidget-conversation{background-color:#e4dcd4 !important;background-image:url('data:image/png !important;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAYAAABUfC3PAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAhHpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAAiZdY5dDoQwCITfOcUeYQqUluOYrCbewOM7tW6MD/slwPAbZD32TT6DAojX1iMjQDw9daHomBhQFGVE+skdrVApxXfmYjpFZG/wZ9DxpiJ6bM1pXDHV1YJmV5M3BOOFfA5E/X3zp34jJ5txK0wLhZMZAAABd2lUWHRYTUw6Y29tLmFkb2JlLnhtcAABAFVURi04AFhNTDpjb20uYWRvYmUueG1wAEiJ7ZaxTsMwFEX3foVl5thJKEOsuB1aUBkKCJBaxjR5Taw2TpQYYvprDHwSv4DdVi2qyojEYE+27/U99vPy4qGuk3QFCi0gF5Ljr49PjETG8exq6k/rERRismngaXP3nG5WaZTh4aAXa6bLugSVIF2uZcs0x0lWLYCZud2mGG0tasXxfPqARlUDqE/6xPeutXgL8aCH4iZbssfxzT7CrDgulKoZpV3Xke6SVE1OgyiKqB/SMPSMw2vfpUq0J9sLG7HLGEObNqJWopLIrpNF9ao4xkZH+3DQ4pguW7K9LEmrklqFBsSnP+1KLH+xW+Vot4fZg9Cwno9FCbI1V+A48IMT9eWMapPYbZnkMBOZKs4JExB5oU6U+0aAqYHahWFqK0n3pTQ/Qw9fM9g+6K+HgziIgziIgziIg/wrSC8+NHcgTUfXmdbtG8Nkm7OA2X6LAAATK0lEQVR4nO1d25bjOI4MgKSy5/+/bR/3cf+hLJLAPoCgaFu2JaeU6dptnFNTPVlpWSJIXAIBiP7nv/9L8a98lPBv38C/ci/xt2/g/5qICGoVqAoUAAEAEQIzmBlE9PIaEQBUFaUUiAhU7VIhMEIIYP73MG0VEUHOpa+lCxEhhICUIkIILxUTRQSlVtRSoAoQAQqFFoGoIsX4r2I2iIjgcrlARMGB8fU1gYigqqhVUGpBzhmqipTS02vFWivmeQYTI8YA5gBVQc4ZJWcQgJgSeMOx+/8qtvAVtQpCDJhSujJVzAIiIJeCXApCiGB+vJ6xioCIME0JIYT2Y7tg6RcJQP+33xMzrcvfIAIBm+z0mSIi8HWMMQ7raMLMSCmZ4sT8DfB4PSNUV51QjBEiipzLsgi/JKoKVYWIQETb/SiICMy8yU6fen/tf0IIDy2K36vq8jyP7rlFXw8e6Beec1l8U4CIQFTa7RCIlpNRRaClYEoJMcbfU8xycF8IbVrTqABqLUh6HR3XWiG12oOe/LBdCarQHgGi7yo3UUQMZuqLTyIopaDUCmJGbGajnyy7QA9N3RocrTxfIhnu/VbsngR4ckJcYuCAWgrmeUZskZaIopQMEUVK8VQnX6ugVgsjq0hfPOaAEPlpfC/NjpdSUUtFYIYCkGa7pdoiKRTUwnx/xiMVw+0ecylgEYSmGP8Oj8BEbHvQi++PIYTuP0qpIJa+y7g9xFlmQUQwzxdUEcQQkG6iltu/b2Wx0xk5C6pUO2kAePA3AEFUuuJTjC/D0j3ieUhgRikFKnK1brVaNEtESCm+tGAxBAbxF2opzWQJiAkpphYin5OjdN+hauF4SggPdpD/rjaPquq70xY+xtSTNWrOlm9OmCqDMEaUz8PSvWILnlriqMil9MVXBYgJMUSE8HqTR8B2Fd2EcmfY3luRZl8Dh+4PgMUnjH+ulaJgDogxIISAaUrdnrsy/DrtYcBAM812osz0HWfGPBwmIpS2ud2bERNS2JbNAwP29RNKuBVueYZicY6OHdXaTm5THFOzxe0TpRYA2h803ChVVFFLBYAOGdnvcVNyvQoajpIOTd1ax/asW+RHAclx15sjrhBRxGYhO3ZUS0MYYo+4/KEMp1OgnQyHhkYppZpth0VzVQImLAtGbN/vDvlo+a6iY875UKfncm9+WkjY/81sre/irqxqpiWmiBBGn2C7X8TOFXNb4JXnr9UUm2JEBZliqnTTxi1i0w/FyONZCjEsqF4ngApwsDDXAowl5HVFgVo+wWSfVYuoPCiw0HbxJ6vfD/TfQwMFPcPzfEc0fwupGD/73ZNxex+H7xUvAzg845A1tR0KXPuv8e8QGCIW75dc7BT00DZ2HzD+WZMYAkQEfy4XQLXjUQtA6KdPnsIdj8RyjtpN5xJ6718rQ5dnix7btU5RSs4ZCsPPQlxC1Fdi4W28UpT/2ZPwhWA+pFbp/3/8fg8cXmFQa8/mfk9UwEQtpLdTHeM+DM6ulaGwnJDazw5VyujEU0qYprR7F4Zwb5ZG3zTKo9PivuORZTYlB6jaImzNxXzD1ZbLETOoVguBRa984BaptSKXgilNSMlUcbnMxyulVjGfcQCUMTr/6rhS04v5ptB9095v4sCQDn1sv59S6lXNRGPCPF8scHjDR1G7Fy+IHW6+HGf6LrbkgUJukIUleeiL76cml4yczWfEHRVSajXzWmpHoHfcXQ8W7G/0YGKvTohtQ+WcIc3UllJOyFP6jb2nlK6QXCBiKLVHbI5Ya0OT/QRZToLNpeuOmWFBpbdsom72xMq7QbmfZmLaDaYHZqQYkRvEZQo+I3kkQGUJQffKGLmlVidZXegGpFYR5HlGyQUqimlKmxUDGNSzRykxRtvZ8wwJEbUaavAOl8ErkhaiG0KejjZfFtUwsr5nX23Xm0n5mr5eRjNuhmiamgMuqHVbzcTvte/0jZ9JyaJDD4ktMHm/+mmKDlBloBXxDlUKM4ODQmfd5UCBJb/x3OZWIZ6IjmVg910hhJ7t51L6jt5yv9LAya15hi+iCENVdofrj655VYp/+0oPxBLEJYTdngMAtS2oHekBXhFBdi5Vy9hiiIgR3WQEZmgMmOcMCductyEJ0hHmrfdqG4FwFsH0lKsSM1wxW0W1wSjEVzB+bZl5rVZZjNGSj5wz5pakAkNWTeYnZMN3O9A5Euc+QQ5Xitt5AJsftp+qVnsYfy61QsXCXnP8liMQkeUZ9ZqJ2EvXm5RipYCeA32InIKTMjOqLPD4FrOgaLZ1/Jln8WR4lpsqZm6FpNrwq8Em9xrNaxlt+TtK6cU3YCB3fL9Gc55SquwyC21pVv/ltjykjvuvie4LxokAJu6BwtYSsWf3peSOXluIe0/G2yurShm5V3bjtDnku0rM6r7d5zmDi9fhnUbrztihF6xEPk8V9ux+RaD8nLk4SikFl3nupWyFJb3IltnH+L5iHiol59wKSkZs2BP2mRkiCLZFNeORv03mmBlhYGsaRmTQy+1GWcwdbaZFEZkfu90Qz8RNM4Be1xGxzSCiqFIRNyp3TVYdvcPTzhapYgWrrTdtu4/6rt7yOc873Cz4Z5gZU0pWW4c2rMqSuBGF9u4BwMzR3g2EHdiVVAvNY0O0uRXtrOwA6DejuYc+ZYHL33OCxAxuJnDrKUsxImdrGXAY3E2nK6xd3QDKm+SyNDI6h31BpZ0+YKs3IrLfVNGrT4hqD1i+I6tKuc2IA+/nfzERZMdJscWPPVGc53zlNB9FNYYWL70fcYo9JN8qZi6xmZ7bGZE1I88zKoeOSDDTOY6e2ZpeHGy7JbZtEV/EWuvmaIiZzH9ooxCZVRmoQHZCXMkejHSFhIi4E4NyHlgYytWv79MSXGkkD4eUFIoQToq+Op7DDCjuTMXWGydiiJRd0VBsDMe5Ib+llMYsdJIdNWhEG2ulgsn8zgjPbBH3Q1KlF622SggBX19fKNWIHSDCV5gO4Sk/9Ck9kXvz+u7szTnv80nMjGmawMESRFGBFK88GhRjXQXUggDrQNtTa3f6qqoipvdI38yMRNRP7jsV0DU5lfnkkY02mtGenegPLC0R9VYCL5laKLtQlNZkjf7q/DEvbgUO3+rrPCKDv5XT6WgeNYnqbqDNI68tNnoMJrRFQeqNRypX/+2csKkFEp/WaHv6SeHG3VWRU/omR/ShE/+GiI/YilnEjBQWpr7f39G7/Ag5XSnWs/FeJXKUkfp6a4K64zMkHiF4FY+aUq75Y58sqvpT5qtsBiddeW6C4H6gK8R5xctpMH7wcgrOaqM7W6SVw8939L0O7rXwdVL2NRncsCUdzJJTOv1PbAnt7c7/2xTh4vDSPB9MxlsTIiDEgFoq/lwuHS8CMDSfujNui0+t9aEt/lKnuK9Z/KYSPLQ+YnxKzhm5FMQYfkIphBStz8+agYwA4Zn5YqZwZfe50UK38pDfkR4MvKHYI8enjF0KMfyAUoCFYF0777a1RQz9Itwy+Z/a+R6ledi9R3wRjxyf4ozLWg8meD//Ulo91r9hhqwreUYp1YbbTNMuxYxjP44Yn7Jcx9pAfrSX6RMiIkehnbL0DrzicM+R41PGiPFDG8xeyzudVEtDU4aKVVQXoHPHdy/fvP4L38ALY4x/r1IsxG7U0fjaH6kqSq1Gi+0Th7ZBOLfCRCg4b3zKX6wUZ+YLKBucY+H2/dACV8g8zyAYu7LWuhlXuxVm6405a3zKX6sUz1s81wmykLVvM3rvyweWfkfR9znAHrScNT7ldKUc2UU7ipervXvMWzDmmjsHixt91nofFdPXV+stqYjhe2MYzxyfcqWU62hhfxPMrYwJlvdiHJkIevVvzhm1VCi0U1rHzir3HSEEXEqjwX59f3DbWeNTrpRy1E52slwptU8WoqaMaZoO+x43IxOADPSxITEEBDJGPYArM2U/012Vylf3sOc6W4iOq+ZrzHb34Exj24JjQgabhEbwK6szFr8rfj0FUEsFEyFMAYGuH895v2/HrAfIFqLjnVL8Q5d57vWQEKwf/lnHr8Jmosx5Rh3IDD5fJefcbua9hO2VhBDwRYQLZsu2c8Y0TVe/00eAQFo/5c/PnnSiY0oRCuqY17j575TipkdbxiqqkDyjlIUFeHvcnObjxayUkrFSBjzL297OFCJCDAE5l17Xv/1Op5jO84xpmjZ1fB0tr4iOd45+UYhNqvPopndTqSKp9pCvwxatgSfFtMo8N9R3/5SHvcJsTJeRu9g5xrBBOzGaKc3FwuSfnNa6heh4t00sfCTEFDqPammjzp0nBaAjv/NlBgiYUnriyKmPy3iHRLFVrPkIg2PX3tpNWJDpmGKHW76+vt+3uFW2EB3vzZdazB/4OsxzhJfbMBv3Od4xM02T1U0ePJihDk0VJzZNuX32KXhzzpDWNkFE0Fyag/X5LNa+103uyTX8LUTHVUc/subHi40Fq8s8tz5Ea3fbVNTZ2mL1pkiDU6wVG9aUqrL0Q4IgLH34Zy9TazUWZ0o/MkL+FdHx3ssN5JA18UlDc26Zc+BDc493xfojWw8km0+ppSJN6Y6SuuRRBUpGGPTZxp8wQv6t0MPqCYbOprh3UtH70yieiS+0BR8VBMY0pVUUwW14jHGYi2wn7BNkt1KW5ktFCnFfG5kuielaE1K3t+/WzIfClc8efmRSe04QQ29f+BRe2L1Smt1/FLr6NFSLGvaFkgrt8+mNQnSjlMZm3DtWY6El1X4C9uBsa1Sl35Q7pRAaU/7BaAznb1kSuf1BeudTq/6N0A3B/KxW7TnSP/987VMM0IZOR6tlfNAi75V7pTAB8qQjuo3NmDgtIe4G6bUOYpthf1WMsuOpqhYxiTz8/jUhspaIOMyZ/GR5RW26U0pgRtXaEdbbi0nPjNeZjg9vpBHWUkp9J6/dVBWB5v3BgJmgXR/5FdlCbbp6DGr8KzwYjeEDa/bOiF9uBC9fFtaBuQ/f7e+IU5v+/Ln0PG9N7vZWaCdgrYG0sxl3LlhpmFncEj57gLHrGz5fRmpTldoZoWtypxRrHzAIoLMZm+yd5qCKzoqk1vv+ygGb4hVHvhzgSBmJ6Hs+s4fatKqUwDZBuw7vK/Rb2GPpVWVAYl8PVO5vdmgwzyeKESVspOKW6UfvUJsetmwvdYnacSP0dzJsuPlG7a+lIA1zd5/efBvQeXRl8kj5CWrTQ6WEEHvNgdoojj6O/EUDkKrasM1+A69N0agU/oXC01b5CWrTwz56Nze1VpSceynYmoDW2+X85mzkko10jfF1Zt1HlUubH/nLrwh8Jj9BbXr4r0RtsihTf6eUAn1y3W10NhbC5mxFr9QG3bykkzYn6Pb2t7LxrU7cqU0xxY6ATG2M/IhyxNh+r5WgdeM8/KfDDRYGeUbOdgx9IEwptdcpxqqkansTRCOlvVLIPM+dof5bNXPAp7kakjAClGtyNrXp6Qr4aQEBZVh08/QVpdjggVKWofw2ASI+PSF+qkqtKE3ZaXqtxLXrOGj6rrmz10QZdO+lwFIVUaQ/xyM5i9r0clv6vC0CIZfcXwDGiA1+lx4aRjT4hKl39o7ii+hvnfYy7SuY/VZUtTeqemvbO0N9AHsnpJvm0HZxlTZFHEAI09PPn0Ft2mQrun8hYFbY1J/A/dj6q/RqrfhzMXT5tqFmrKP41B9/u8JemN59kDTmpYi9J3La2ZEFtCl3VfCf//wzNMgG/PlzsRetPddJX58jqU2bDbjTiYxUwcu4vhA7QlvqQnZ2XGfJbKgPuYkprCpui3jsT0RI0zQMT5A2b2v79TpCQUvPIYA+37iz6Ddc70hq02aluMmw92qFvgALedocZG0EPq+duBChdfsuRax3RUXAYRl0owBKXt4FuVXHnZYLtAKZ3agDr0TbpxIdSW3aFeqISI/FFzhk8QPvNuHsFaM26QIBtfI00/5OAaf7lBYBElF7PyTtenPQkdSmzUrxNmvwEkMQ/XwZ1UP1ec4o5dLeGFTBIfSR63skhICvaTL0tr2s03hsafMGO5ratEkpyxACvRrcfEQvxl7xHCElbaaBwJE3wzmPrgcspQkDZcMmUPQMatPuTI2w2OHfEm9Aiuovd/7e5rjl9+6RM6hN+5XSaZa/i039xildkzOoTXHvGEEMi3E2g/7T5SxqE/t7C18K3fsSHSKgv0k6oXAPZebRtWDUppEQ8l2Jc0Nnn8EJRHQ3PMAnqeZcProodSs+FKG2iO3RYFBto5WeWYGzqE1sOcfrF9B0Gz4UdLR1cP0tYq2Dc39z0Xy52NuKVjC6xXc+F0+gj+xv4e0FXvTsuSsF6+1hnyoLKmGTtlXtZQK3daHf9pGsGxUCoM+Qr7V1DrfXNf0tp8UQuPY209bu5xiXy28rBADYW+Ve3UwP2xptaKRe/i0+xTqdDSK6/LlAxd5zzB90/6qK6DyvLTvEWuwKSmkz4tvrvz9hd20VbyF3vxFC+Cjin5UBWn/8M3GsRtHajBuUICrg8LvMk2WCg/Zi17PE8tPaHkZx6xOf9Sr25KhaxayPsQVdzQX+LXF4fJ5zhzpSirvfDvEJcplnKyeHgP8FbJ3FbCth4+oAAAAASUVORK5CYII=') !important;background-repeat:repeat !important;box-shadow:rgba(0, 0, 0, 0.16) 0px 5px 40px !important;width:250px !important;height:300px !important;border-radius:10px !important;transition-duration:0.5s !important;margin-bottom:80px !important}.whatswidget-conversation-header{background-color:white !important;padding:10px !important;padding-left:25px !important;box-shadow:0px 1px #00000029 !important;font-weight:600 !important;border-top-left-radius:10px !important;border-top-right-radius:10px !important}.whatswidget-conversation-message{line-height: 1.2em !important;background-color:white !important;padding:10px !important;margin:10px !important;margin-left:15px !important;border-radius:5px !important}.whatswidget-conversation-message-outer{background-color:#FFF !important;padding:10px !important;margin:10px !important;margin-left:0px !important;border-radius:5px !important;box-shadow:rgba(0, 0, 0, 0.342) 0px 2.5px 10px !important;cursor:pointer !important;animation:nudge 2s linear infinite !important;margin-bottom:70px !important}.whatswidget-text-header-outer{font-weight:bold !important;font-size:90% !important}.whatswidget-text-message-outer{font-size:90% !important}.whatswidget-conversation-cta{border-radius:25px !important;width:175px !important;font-size:110% !important;padding:10px !important;margin:0 auto !important;text-align:center !important;background-color:#23b123 !important;color:white !important;font-weight:bold !important;box-shadow:rgba(0, 0, 0, 0.16) 0px 2.5px 10px !important;transition:1s !important;position:absolute !important;top:62% !important;left:10% !important}.whatswidget-conversation-cta:hover{transform:scale(1.1) !important;filter:brightness(1.3) !important}.whatswidget-cta{text-decoration:none !important;color:white !important}.whatswidget-cta-desktop{display:none !important}.whatswidget-cta-mobile{display:inherit !important}@media (min-width: 48em){.whatswidget-cta-desktop{display:inherit !important}
 		.whatswidget-cta-mobile{display:none !important}}.whatswidget-button-wrapper{position:fixed !important;bottom:15px !important;right:15px !important}.whatswidget-button{position:relative !important;right:0px !important;background-color:#31d831 !important;border-radius:100% !important;width:60px !important;height:60px !important;box-shadow:2px 1px #0d630d63 !important;transition:1s !important}.whatswidget-icon{width:42px !important;height:42px !important;position:absolute !important; bottom:10px !important; left:10px !important;}.whatswidget-button:hover{filter:brightness(115%) !important;transform:rotate(15deg) scale(1.15) !important;cursor:pointer !important}@keyframes nudge{20%,100%{transform:translate(0,0)}0%{transform:translate(0,5px);transform:rotate(2deg)}10%{transform:translate(0,-5px);transform:rotate(-2deg)}}.whatswidget-link{position:absolute !important;bottom:90px !important;right:5px !important;opacity:0.5 !important}</style>
 	</div>
+
+    <script>
+        // Simple mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const nav = document.querySelector('nav div');
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
